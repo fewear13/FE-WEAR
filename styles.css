@@ -11,6 +11,7 @@ header {
   padding: 10px 20px;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 nav {
@@ -35,16 +36,27 @@ nav ul li a:hover {
   color: gold;
 }
 
+/* Carrito icono */
+#carrito-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#contador-carrito {
+  background: gold;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
 /* Hero */
 #hero {
-  background: url("https://via.placeholder.com/1200x400") no-repeat center/cover;
+  background: url("https://images.unsplash.com/photo-1523380719339-364e8e7077a5?w=1200") no-repeat center/cover;
   color: white;
   text-align: center;
   padding: 100px 20px;
-}
-
-#hero h2 {
-  font-size: 2.5rem;
 }
 
 .btn {
@@ -80,74 +92,57 @@ nav ul li a:hover {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card img {
   max-width: 100%;
   border-radius: 10px;
+  height: 250px;
+  object-fit: cover;
 }
 
-.card h3 {
-  margin: 15px 0 10px;
+/* Carrito flotante */
+#carrito {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  display: none;
 }
 
-.card button {
-  background: #222;
-  color: white;
-  padding: 10px;
-  border: none;
-  margin-top: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.card button:hover {
-  background: gold;
-  color: black;
-}
-
-/* Misión */
-#mision {
-  padding: 50px 20px;
-  background: #eee;
+#carrito h3 {
   text-align: center;
 }
 
-/* Contacto */
-#contacto {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-form input, form textarea {
+#carrito ul {
+  list-style: none;
+  padding: 0;
   margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
-form button {
-  background: #222;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+#carrito ul li {
+  border-bottom: 1px solid #eee;
+  padding: 5px 0;
 }
 
-form button:hover {
-  background: gold;
-  color: black;
+/* Footer y secciones */
+#mision, #contacto {
+  padding: 50px 20px;
+  text-align: center;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;

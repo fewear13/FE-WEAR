@@ -16,6 +16,9 @@
         <li><a href="#mision">Nuestra misión</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <div id="carrito-icon" onclick="toggleCarrito()">
+        🛒 <span id="contador-carrito">0</span>
+      </div>
     </nav>
   </header>
 
@@ -31,25 +34,50 @@
     <h2>Nuestra colección</h2>
     <div class="grid">
       <div class="card">
-        <img src="https://via.placeholder.com/200" alt="Playera 1">
+        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600" alt="Playera Todo lo puedo en Cristo">
         <h3>Todo lo puedo en Cristo</h3>
         <p>$299 MXN</p>
-        <button onclick="agregarCarrito('Todo lo puedo en Cristo')">Comprar</button>
+        <button onclick="agregarCarrito('Todo lo puedo en Cristo', 299)">Comprar</button>
       </div>
+
       <div class="card">
-        <img src="https://via.placeholder.com/200" alt="Playera 2">
+        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600" alt="Playera El Señor es mi Pastor">
         <h3>El Señor es mi Pastor</h3>
         <p>$299 MXN</p>
-        <button onclick="agregarCarrito('El Señor es mi Pastor')">Comprar</button>
+        <button onclick="agregarCarrito('El Señor es mi Pastor', 299)">Comprar</button>
       </div>
+
       <div class="card">
-        <img src="https://via.placeholder.com/200" alt="Playera 3">
+        <img src="https://images.unsplash.com/photo-1523380719339-364e8e7077a5?w=600" alt="Playera Sé fuerte y valiente">
         <h3>Sé fuerte y valiente</h3>
         <p>$299 MXN</p>
-        <button onclick="agregarCarrito('Sé fuerte y valiente')">Comprar</button>
+        <button onclick="agregarCarrito('Sé fuerte y valiente', 299)">Comprar</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600" alt="Playera Luz en la oscuridad">
+        <h3>Luz en la oscuridad</h3>
+        <p>$299 MXN</p>
+        <button onclick="agregarCarrito('Luz en la oscuridad', 299)">Comprar</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1593032457860-88b24bce9b8e?w=600" alt="Playera Amarás a tu prójimo">
+        <h3>Amarás a tu prójimo</h3>
+        <p>$299 MXN</p>
+        <button onclick="agregarCarrito('Amarás a tu prójimo', 299)">Comprar</button>
       </div>
     </div>
   </section>
+
+  <!-- Carrito -->
+  <div id="carrito">
+    <h3>🛍️ Tu carrito</h3>
+    <ul id="lista-carrito"></ul>
+    <p id="total">Total: $0 MXN</p>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    <button id="btn-pago" onclick="finalizarCompra()">Finalizar compra 💳</button>
+  </div>
 
   <!-- Misión -->
   <section id="mision">
