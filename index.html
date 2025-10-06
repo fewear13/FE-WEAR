@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeWear - Playeras con propósito</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navegación -->
+  <header>
+    <nav>
+      <h1 class="logo">FeWear ✝️</h1>
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#mision">Nuestra misión</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <h2>"Luz en la oscuridad"</h2>
+    <p>Playeras con frases bíblicas para inspirar tu día.</p>
+    <a href="#productos" class="btn">Ver colección</a>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos">
+    <h2>Nuestra colección</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/200" alt="Playera 1">
+        <h3>Todo lo puedo en Cristo</h3>
+        <p>$299 MXN</p>
+        <button onclick="agregarCarrito('Todo lo puedo en Cristo')">Comprar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200" alt="Playera 2">
+        <h3>El Señor es mi Pastor</h3>
+        <p>$299 MXN</p>
+        <button onclick="agregarCarrito('El Señor es mi Pastor')">Comprar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200" alt="Playera 3">
+        <h3>Sé fuerte y valiente</h3>
+        <p>$299 MXN</p>
+        <button onclick="agregarCarrito('Sé fuerte y valiente')">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión -->
+  <section id="mision">
+    <h2>Nuestra misión</h2>
+    <p>En FeWear creemos que vestir también es un acto de fe. Queremos compartir esperanza y amor a través de cada playera.</p>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea placeholder="Escribe tu mensaje"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 FeWear - Playeras con propósito</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
